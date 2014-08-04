@@ -5,3 +5,10 @@ CREATE TABLE Genre
   themoviedb_id INT,
   PRIMARY KEY (id)
 )
+
+CREATE TABLE MOVIE
+(
+  id INT NOT NULL AUTO_INCREMENT,
+  original_title VARCHAR(100),
+  PRIMARY KEY (id)
+)

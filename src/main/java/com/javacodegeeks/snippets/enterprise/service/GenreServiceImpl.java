@@ -1,5 +1,7 @@
 package com.javacodegeeks.snippets.enterprise.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,17 +28,26 @@ public class GenreServiceImpl implements GenreService{
 		GenreDAO.updateGenre(genre);
 		
 	}
-	@Override
-	@Transactional
-	public Genre findGenreById(String id) {
-		return GenreDAO.findGenreById(id);
-	}
+	
+	
 
 	@Override
 	@Transactional
 	public void deleteGenre(Genre genre) {
 		GenreDAO.deleteGenre(genre);
 		
+	}
+	
+	@Override
+	@Transactional
+	public Genre findGenreById(int id) {
+		return GenreDAO.findGenreById(id);
+	}
+
+	@Override
+	@Transactional
+	public Genre findGenreByTheMovieDbId(int theMovieDbId) {
+		return GenreDAO.findGenreByTheMovieDbId(theMovieDbId);
 	}
 
 }

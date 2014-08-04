@@ -1,6 +1,11 @@
 package com.javacodegeeks.snippets.enterprise.dao;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +23,9 @@ public class GenreDAOImpl implements GenreDAO {
 	}
 
 	@Override
-	public Genre findGenreById(String id) {
+	public Genre findGenreById(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		System.out.println("tests Session Factory");
 		return (Genre) sessionFactory.getCurrentSession().get(Genre.class, id);
 	}
 
@@ -31,6 +38,14 @@ public class GenreDAOImpl implements GenreDAO {
 	public void deleteGenre(Genre genre) {
 		sessionFactory.getCurrentSession().delete(genre);
 
+	}
+
+	@Override
+	public Genre findGenreByTheMovieDbId(int theMovieDbId) {
+		Criteria cr = sessionFactory.getCurrentSession().createCriteria(Genre.class);
+		cr.add(Restrictions.eq("themoviedb_id", theMovieDbId));
+		List results = cr.list();
+		return (Genre)results.get(0);
 	}
 
 }

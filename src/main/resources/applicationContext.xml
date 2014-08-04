@@ -21,6 +21,7 @@
      <property name="annotatedClasses">
             <list>
                 <value>com.javacodegeeks.snippets.enterprise.model.Employee</value>
+                <value>com.javacodegeeks.snippets.enterprise.model.Movie</value>
                 <value>com.javacodegeeks.snippets.enterprise.model.Genre</value>
             </list>
         </property>
