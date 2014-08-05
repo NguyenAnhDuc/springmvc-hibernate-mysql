@@ -1,4 +1,4 @@
-package com.javacodegeeks.snippets.enterprise.model;
+package com.fpt.ruby.model;
 
 import java.util.Set;
 
@@ -16,12 +16,11 @@ public class Genre {
 
 	@Id
 	@Column (name = "ID", nullable = false)
-	@GeneratedValue
 	private int id;
 
 	@Column(name = "NAME", nullable = false) private String name;
 	
-	@Column(name = "THEMOVIEDB_ID", nullable = false) private int themoviedb_id;
+	//@Column(name = "THEMOVIEDB_ID", nullable = false) private int themoviedb_id;
 	/*@ManyToMany(fetch = FetchType.LAZY, mappedBy = "genres") private Set<Movie> movies;
 	public Set<Movie> getMovies() {
 		return movies;
@@ -32,9 +31,9 @@ public class Genre {
 	public Genre(){
 		
 	}
-	public Genre(String name, int themoviedb_id){
+	public Genre(String name, int id){
 		this.name = name;
-		this.themoviedb_id = themoviedb_id;
+		this.id = id;
 	}
 	public int getId() {
 		return id;
@@ -48,11 +47,4 @@ public class Genre {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getThemoviedb_id() {
-		return themoviedb_id;
-	}
-	public void setThemoviedb_id(int themoviedb_id) {
-		this.themoviedb_id = themoviedb_id;
-	}
-	
 }

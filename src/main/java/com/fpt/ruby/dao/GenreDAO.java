@@ -1,8 +1,6 @@
-package com.javacodegeeks.snippets.enterprise.dao;
+package com.fpt.ruby.dao;
 
-import java.util.List;
-
-import com.javacodegeeks.snippets.enterprise.model.Genre;
+import com.fpt.ruby.model.Genre;
 
 public interface GenreDAO {
 	

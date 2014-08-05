@@ -1,15 +1,14 @@
-package com.javacodegeeks.snippets.enterprise.dao;
+package com.fpt.ruby.dao;
 
 import java.util.List;
 
 import org.hibernate.Criteria;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.javacodegeeks.snippets.enterprise.model.Genre;
+import com.fpt.ruby.model.Genre;
 
 @Repository("genreDAO")
 public class GenreDAOImpl implements GenreDAO {
@@ -24,8 +23,6 @@ public class GenreDAOImpl implements GenreDAO {
 
 	@Override
 	public Genre findGenreById(int id) {
-		Session session = sessionFactory.getCurrentSession();
-		System.out.println("tests Session Factory");
 		return (Genre) sessionFactory.getCurrentSession().get(Genre.class, id);
 	}
 

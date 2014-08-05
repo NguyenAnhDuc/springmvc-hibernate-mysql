@@ -1,4 +1,4 @@
-package com.fpt.qa.helper;
+package com.fpt.ruby.helper;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

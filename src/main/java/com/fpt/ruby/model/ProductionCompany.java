@@ -1,15 +1,13 @@
-package com.javacodegeeks.snippets.enterprise.model;
+package com.fpt.ruby.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
-@Table(name = "EMPLOYEE")
-public class Employee {
-
+@Table(name = "PRODUCTION_COMPANY")
+public class ProductionCompany {
 	@Id
 	@Column (name = "ID", nullable = false)
 	@GeneratedValue
@@ -17,12 +15,6 @@ public class Employee {
 
 	@Column(name = "NAME", nullable = false)
 	private String name;
-
-	@Column(name = "AGE", nullable = false)
-	private long age;
-	
-	public Employee() {
-	}
 
 	public int getId() {
 		return id;
@@ -39,13 +31,5 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public long getAge() {
-		return age;
-	}
-
-	public void setAge(long age) {
-		this.age = age;
-	}
-
+	
 }

@@ -1,10 +1,10 @@
-package com.javacodegeeks.snippets.enterprise.dao;
+package com.fpt.ruby.dao;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.javacodegeeks.snippets.enterprise.model.Employee;
+import com.fpt.ruby.model.Employee;
 
 @Repository("employeeDAO")
 public class EmployeeDAOImpl implements EmployeeDAO {

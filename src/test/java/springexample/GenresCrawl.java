@@ -3,10 +3,11 @@ package springexample;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.fpt.qa.helper.HttpHelper;
-import com.javacodegeeks.snippets.enterprise.model.Genre;
-import com.javacodegeeks.snippets.enterprise.service.EmployeeService;
-import com.javacodegeeks.snippets.enterprise.service.GenreService;
+import com.fpt.ruby.helper.HttpHelper;
+import com.fpt.ruby.model.Genre;
+import com.fpt.ruby.service.EmployeeService;
+import com.fpt.ruby.service.GenreService;
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

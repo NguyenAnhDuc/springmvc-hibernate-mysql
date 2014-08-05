@@ -1,4 +1,4 @@
-package com.javacodegeeks.snippets.enterprise.service;
+package com.fpt.ruby.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.javacodegeeks.snippets.enterprise.dao.GenreDAO;
-import com.javacodegeeks.snippets.enterprise.model.Genre;
+import com.fpt.ruby.dao.GenreDAO;
+import com.fpt.ruby.model.Genre;
 
 @Service("genreService")
 public class GenreServiceImpl implements GenreService{

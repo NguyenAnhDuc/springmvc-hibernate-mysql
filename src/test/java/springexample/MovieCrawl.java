@@ -10,7 +10,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.hibernate.service.jta.platform.internal.JOnASJtaPlatform;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import com.fpt.qa.helper.*;
+
+import com.fpt.ruby.helper.*;
 public class MovieCrawl {
 	
 	

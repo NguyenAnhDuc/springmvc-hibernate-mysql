@@ -1,11 +1,11 @@
-package com.javacodegeeks.snippets.enterprise.service;
+package com.fpt.ruby.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.javacodegeeks.snippets.enterprise.dao.EmployeeDAO;
-import com.javacodegeeks.snippets.enterprise.model.Employee;
+import com.fpt.ruby.dao.EmployeeDAO;
+import com.fpt.ruby.model.Employee;
 
 @Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService{

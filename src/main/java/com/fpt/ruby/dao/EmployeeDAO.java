@@ -1,6 +1,6 @@
-package com.javacodegeeks.snippets.enterprise.dao;
+package com.fpt.ruby.dao;
 
-import com.javacodegeeks.snippets.enterprise.model.Employee;
+import com.fpt.ruby.model.Employee;
 
 public interface EmployeeDAO {
 	

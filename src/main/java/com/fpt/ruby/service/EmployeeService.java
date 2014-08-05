@@ -1,6 +1,6 @@
-package com.javacodegeeks.snippets.enterprise.service;
+package com.fpt.ruby.service;
 
-import com.javacodegeeks.snippets.enterprise.model.Employee;
+import com.fpt.ruby.model.Employee;
 
 public interface EmployeeService {
 

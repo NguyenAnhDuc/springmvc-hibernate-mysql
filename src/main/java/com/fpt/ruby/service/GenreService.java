@@ -1,8 +1,8 @@
-package com.javacodegeeks.snippets.enterprise.service;
+package com.fpt.ruby.service;
 
 import java.util.List;
 
-import com.javacodegeeks.snippets.enterprise.model.Genre;
+import com.fpt.ruby.model.Genre;
 
 public interface GenreService {
 

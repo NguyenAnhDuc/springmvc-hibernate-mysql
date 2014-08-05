@@ -1,4 +1,4 @@
-package com.javacodegeeks.snippets.enterprise;
+package com.fpt.ruby;
 
 import java.util.HashSet;
 import java.util.List;
@@ -7,12 +7,12 @@ import java.util.Set;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.javacodegeeks.snippets.enterprise.model.Employee;
-import com.javacodegeeks.snippets.enterprise.model.Genre;
-import com.javacodegeeks.snippets.enterprise.model.Movie;
-import com.javacodegeeks.snippets.enterprise.service.EmployeeService;
-import com.javacodegeeks.snippets.enterprise.service.GenreService;
-import com.javacodegeeks.snippets.enterprise.service.MovieService;
+import com.fpt.ruby.model.Employee;
+import com.fpt.ruby.model.Genre;
+import com.fpt.ruby.model.Movie;
+import com.fpt.ruby.service.EmployeeService;
+import com.fpt.ruby.service.GenreService;
+import com.fpt.ruby.service.MovieService;
 
 public class App {
 
