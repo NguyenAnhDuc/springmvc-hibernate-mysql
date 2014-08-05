@@ -10,7 +10,6 @@ public interface GenreService {
 
 	Genre findGenreById(int id);
 
-	Genre findGenreByTheMovieDbId(int id);
 
 	void updateGenre(Genre genre);
 

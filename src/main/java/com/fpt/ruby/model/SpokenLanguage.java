@@ -10,7 +10,6 @@ import javax.persistence.Table;
 public class SpokenLanguage {
 	@Id
 	@Column (name = "ISO_3166_1", nullable = false)
-	@GeneratedValue
 	private String iso_639_1;
 
 	@Column(name = "NAME", nullable = false)

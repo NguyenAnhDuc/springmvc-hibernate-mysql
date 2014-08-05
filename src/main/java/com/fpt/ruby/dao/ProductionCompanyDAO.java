@@ -6,7 +6,7 @@ public interface ProductionCompanyDAO {
 	
 		  void persistProductionCompany(ProductionCompany productionCompany);
 		  
-		  ProductionCompany findProductionCompanyById(String id);
+		  ProductionCompany findProductionCompanyById(int id);
 		  
 		  void updateProductionCompany(ProductionCompany productionCompany);
 		  

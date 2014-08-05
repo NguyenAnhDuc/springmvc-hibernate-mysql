@@ -8,8 +8,6 @@ public interface GenreDAO {
 		  
 		  Genre findGenreById(int id);
 
-		  Genre findGenreByTheMovieDbId(int theMovieDbId);
-		  
 		  void updateGenre(Genre genre);
 		  
 		  void deleteGenre(Genre genre);

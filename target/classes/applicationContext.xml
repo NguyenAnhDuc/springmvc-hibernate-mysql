@@ -23,6 +23,9 @@
                 <value>com.fpt.ruby.model.Employee</value>
                 <value>com.fpt.ruby.model.Movie</value>
                 <value>com.fpt.ruby.model.Genre</value>
+                <value>com.fpt.ruby.model.ProductionCompany</value>
+                <value>com.fpt.ruby.model.ProductionCountry</value>
+                <value>com.fpt.ruby.model.SpokenLanguage</value>
             </list>
         </property>
     <property name="hibernateProperties">

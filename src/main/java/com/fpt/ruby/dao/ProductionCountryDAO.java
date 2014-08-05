@@ -1,6 +1,5 @@
 package com.fpt.ruby.dao;
 
-import com.fpt.ruby.model.ProductionCompany;
 import com.fpt.ruby.model.ProductionCountry;
 
 public interface ProductionCountryDAO {

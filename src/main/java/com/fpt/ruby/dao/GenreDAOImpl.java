@@ -37,12 +37,12 @@ public class GenreDAOImpl implements GenreDAO {
 
 	}
 
-	@Override
+	/*@Override
 	public Genre findGenreByTheMovieDbId(int theMovieDbId) {
 		Criteria cr = sessionFactory.getCurrentSession().createCriteria(Genre.class);
 		cr.add(Restrictions.eq("themoviedb_id", theMovieDbId));
 		List results = cr.list();
 		return (Genre)results.get(0);
-	}
+	}*/
 
 }

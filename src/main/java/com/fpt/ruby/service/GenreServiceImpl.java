@@ -44,10 +44,10 @@ public class GenreServiceImpl implements GenreService{
 		return GenreDAO.findGenreById(id);
 	}
 
-	@Override
+	/*@Override
 	@Transactional
 	public Genre findGenreByTheMovieDbId(int theMovieDbId) {
 		return GenreDAO.findGenreByTheMovieDbId(theMovieDbId);
-	}
+	}*/
 
 }

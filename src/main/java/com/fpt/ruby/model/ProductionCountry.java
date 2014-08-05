@@ -10,7 +10,6 @@ import javax.persistence.Table;
 public class ProductionCountry {
 	@Id
 	@Column (name = "ISO_3166_1", nullable = false)
-	@GeneratedValue
 	private int iso_3166_1;
 
 	@Column(name = "NAME", nullable = false)
