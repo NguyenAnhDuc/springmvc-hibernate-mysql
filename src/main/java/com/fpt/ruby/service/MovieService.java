@@ -7,6 +7,8 @@ public interface MovieService {
 	void persistMovie(Movie movie);
 
 	Movie findMovieById(int id);
+	
+	Movie getMovieByIdWithAllLazy(int  id);
 
 	Movie findMovieByTheMovieDbId(int theMovieDbId);
 

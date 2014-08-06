@@ -6,10 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name = "Spoken_Languge")
+@Table(name = "Spoken_Language")
 public class SpokenLanguage {
 	@Id
-	@Column (name = "ISO_3166_1", nullable = false)
+	@Column (name = "ISO_639_1", nullable = false)
 	private String iso_639_1;
 
 	@Column(name = "NAME", nullable = false)

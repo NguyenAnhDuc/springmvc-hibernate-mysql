@@ -16,14 +16,14 @@ CREATE TABLE Production_Company
 
 CREATE TABLE Production_Country
 (
-  iso_3166_1 INT NOT NULL,
+  iso_3166_1 VARCHAR(10) NOT NULL,
   name VARCHAR(250),
   PRIMARY KEY (iso_3166_1) USING BTREE
 )
 
 CREATE TABLE Spoken_Language
 (
-  iso_639_1 INT NOT NULL,
+  iso_639_1 VARCHAR(10) NOT NULL,
   name VARCHAR(250),
   PRIMARY KEY (iso_639_1) USING BTREE
 )
@@ -57,12 +57,6 @@ CREATE TABLE MOVIE
 
 )
 
-CREATE TABLE Movie_Genre
-(
-	movie_id INT NOT NULL,
-	genre_id INT NOT NULL,
-
-)
 
 CREATE TABLE  `movie_productioncompany` (
   `MOVIE_ID` INT NOT NULL,
@@ -70,4 +64,20 @@ CREATE TABLE  `movie_productioncompany` (
   PRIMARY KEY (`MOVIE_ID`,`productioncompany_ID`),
   FOREIGN KEY (`MOVIE_ID`) REFERENCES `MOVIE` (`ID`),
   FOREIGN KEY (`productioncompany_ID`) REFERENCES `production_company` (`ID`)
+)
+
+CREATE TABLE  `movie_productioncountry` (
+  `MOVIE_ID` INT NOT NULL,
+  `productioncountry_iso3166` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`MOVIE_ID`,`productioncountry_iso3166`),
+  FOREIGN KEY (`MOVIE_ID`) REFERENCES `MOVIE` (`ID`),
+  FOREIGN KEY (`productioncountry_iso3166`) REFERENCES `production_country` (`iso_3166_1`)
+)
+
+CREATE TABLE  `movie_spokenlanguage` (
+  `MOVIE_ID` INT NOT NULL,
+  `spokenlanguage_iso639` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`MOVIE_ID`,`spokenlanguage_iso639`),
+  FOREIGN KEY (`MOVIE_ID`) REFERENCES `MOVIE` (`ID`),
+  FOREIGN KEY (`spokenlanguage_iso639`) REFERENCES `spoken_language` (`iso_639_1`)
 )

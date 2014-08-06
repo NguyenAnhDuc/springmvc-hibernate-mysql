@@ -17,11 +17,7 @@ public class ProductionCompanyDAOImpl implements ProductionCompanyDAO {
 		sessionFactory.getCurrentSession().persist(productionCompany);
 	}
 
-	@Override
-	public ProductionCompany findProductionCompanyById(int id) {
-		return (ProductionCompany) sessionFactory.getCurrentSession().get(ProductionCompany.class, id);
-	}
-
+	
 	@Override
 	public void updateProductionCompany(ProductionCompany productionCompany) {
 		sessionFactory.getCurrentSession().update(productionCompany);
@@ -31,6 +27,11 @@ public class ProductionCompanyDAOImpl implements ProductionCompanyDAO {
 	public void deleteProductionCompany(ProductionCompany productionCompany) {
 		sessionFactory.getCurrentSession().delete(productionCompany);
 
+	}
+
+	@Override
+	public ProductionCompany findProductionCompanyById(int id) {
+		return (ProductionCompany) sessionFactory.getCurrentSession().get(ProductionCompany.class, id);
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.fpt.ruby.dao;
 
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,6 +14,7 @@ public class MovieDAOImpl implements MovieDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	
 	@Override
 	public void persistMovie(Movie movie) {
 		sessionFactory.getCurrentSession().persist(movie);
@@ -19,6 +22,10 @@ public class MovieDAOImpl implements MovieDAO {
 
 	@Override
 	public Movie findMovieById(int id) {
+		System.out.println("Begin get movie with Genres");
+		Session session = sessionFactory.getCurrentSession();
+		System.out.println("exception?");
+		
 		return (Movie) sessionFactory.getCurrentSession().get(Movie.class, id);
 	}
 
@@ -37,6 +44,16 @@ public class MovieDAOImpl implements MovieDAO {
 	public void deleteMovie(Movie movie) {
 		sessionFactory.getCurrentSession().delete(movie);
 
+	}
+
+	@Override
+	public Movie getMovieByIdWithAllLazy(int id) {
+		Movie movie = (Movie) sessionFactory.getCurrentSession().get(Movie.class, id);
+		Hibernate.initialize(movie.getGenres());
+		Hibernate.initialize(movie.getProduction_companies());
+		Hibernate.initialize(movie.getProduction_countries());
+		Hibernate.initialize(movie.getSpoken_languages());
+		return movie;
 	}
 
 	
