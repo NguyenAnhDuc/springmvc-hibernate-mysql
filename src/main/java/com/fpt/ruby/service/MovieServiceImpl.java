@@ -40,6 +40,13 @@ public class MovieServiceImpl implements MovieService{
 		MovieDAO.deleteMovie(movie);
 		
 	}
+	
+	@Override
+	@Transactional
+	public void saveMovie(Movie movie) {
+		MovieDAO.saveMovie(movie);
+		
+	}
 
 	@Override
 	public Movie findMovieByTheMovieDbId(int theMovieDbId) {

@@ -14,6 +14,8 @@ public interface MovieDAO {
 		  Movie findMovieByTheMovieDbId(int theMovieDbId);
 		  
 		  void updateMovie(Movie movie);
+
+		  void saveMovie(Movie movie);
 		  
 		  void deleteMovie(Movie movie);
 		  

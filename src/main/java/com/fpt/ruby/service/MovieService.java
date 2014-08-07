@@ -15,4 +15,6 @@ public interface MovieService {
 	void updateMovie(Movie movie);
 
 	void deleteMovie(Movie movie);
+	
+	void saveMovie(Movie movie);
 }

@@ -33,7 +33,7 @@ public class Movie {
 	
 	@Column(name = "adult", nullable = true) private boolean adult;
 	@Column(name = "budget", nullable = true) private double budget;
-	@Column(name = "homepage", nullable = true) private int homepage;
+	@Column(name = "homepage", nullable = true) private String homepage;
 	@Column(name = "imdb_id", nullable = true) private String imdb_id;
 	@Column(name = "themoviedb_id", nullable = true) private int themovie_id;
 	@Column(name = "popularity", nullable = true) private Double popularity;
@@ -90,11 +90,11 @@ public class Movie {
 		this.budget = budget;
 	}
 
-	public int getHomepage() {
+	public String getHomepage() {
 		return homepage;
 	}
 
-	public void setHomepage(int homepage) {
+	public void setHomepage(String homepage) {
 		this.homepage = homepage;
 	}
 

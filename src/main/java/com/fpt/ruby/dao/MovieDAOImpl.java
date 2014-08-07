@@ -40,6 +40,12 @@ public class MovieDAOImpl implements MovieDAO {
 		sessionFactory.getCurrentSession().update(Movie);
 
 	}
+	
+	@Override
+	public void saveMovie(Movie Movie) {
+		sessionFactory.getCurrentSession().save(Movie);
+	}
+	
 	@Override
 	public void deleteMovie(Movie movie) {
 		sessionFactory.getCurrentSession().delete(movie);

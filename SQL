@@ -81,3 +81,14 @@ CREATE TABLE  `movie_spokenlanguage` (
   FOREIGN KEY (`MOVIE_ID`) REFERENCES `MOVIE` (`ID`),
   FOREIGN KEY (`spokenlanguage_iso639`) REFERENCES `spoken_language` (`iso_639_1`)
 )
+
+DELETE FROM movie_spokenlanguage;
+DELETE FROM movie_productioncompany;
+DELETE FROM movie_productioncountry;
+DELETE FROM movie_genre;
+DELETE FROM genre;
+DELETE FROM production_company;
+DELETE FROM production_country;
+DELETE FROM spoken_language;
+DELETE FROM movie;
+
