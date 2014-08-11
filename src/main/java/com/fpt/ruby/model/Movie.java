@@ -68,7 +68,7 @@ public class Movie {
 	spoken_languages
 	production_countries
 	production_companies
-*/
+	 */
 
 	public int getId() {
 		return id;

@@ -111,8 +111,8 @@ public class MovieCrawl {
 		}
 	}
 	
-	public static void crawlAll(int maxPage) throws Exception{
-		for (int i=1;i<=maxPage;i++){
+	public static void crawlAll(int minPage,int maxPage) throws Exception{
+		for (int i=minPage;i<=maxPage;i++){
 			System.out.println("Crawling Page " + i);
 			crawlPage(i);
 		}
@@ -130,7 +130,7 @@ public class MovieCrawl {
 	
 	public static void main(String[] args) throws Exception {
 		init();
-		crawlAll(1000);
+		crawlAll(753,1000);
 		//testMovie();
 		//testDiscover();
 	}
